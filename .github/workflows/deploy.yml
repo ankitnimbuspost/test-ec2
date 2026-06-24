@@ -20,6 +20,10 @@ jobs:
 
       - name: Install Dependencies
         run: composer install --prefer-dist --no-interaction
+      - name: Setup Laravel Environment
+        run: |
+          cp .env.example .env
+          php artisan key:generate
 
       - name: Run Tests
         run: php artisan test
