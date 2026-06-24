@@ -23,3 +23,7 @@ Route::get('/contact', function () {
     echo "Contact Us page";
 });
 
+Route::get('/test', function () {
+    echo "Automation test";
+});
+
